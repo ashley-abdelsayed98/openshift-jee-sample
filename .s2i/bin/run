@@ -1,4 +1,5 @@
 #!/bin/bash
 echo hello world
 pwd
+ls
 exec /wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0 --git-repo=https://github.com/ashley-abdelsayed98/git-persistence.git
