@@ -1,23 +1,13 @@
 <configuration>
   <authentication-client xmlns="urn:elytron:client:1.5">
-    <credential-stores>
-      <credential-store name="store1">
-        <protection-parameter-credentials>
-          <clear-password password="secret"/>
-        </protection-parameter-credentials>
-        <attributes>
-          <attribute name="keyStoreType" value="JCEKS"/>
-          <attribute name="location" value="cs_example.cs"/>
-        </attributes>
-      </credential-store>
-    </credential-stores>
     <authentication-rules>
       <rule use-configuration="example"/>
     </authentication-rules>
     <authentication-configurations>
       <configuration name="example">
+        <set-user-name name="ehsavoie" />
         <credentials>
-          <credential-store-reference store="store1" alias="example" clear-text="Elytron"/>
+          <clear-password password="my_api_key" />
         </credentials>
       </configuration>
     </authentication-configurations>
